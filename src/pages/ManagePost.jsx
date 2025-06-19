@@ -18,9 +18,7 @@ const formatTimeAgo = (timestamp) => {
   for (let i of intervals) {
     const count = Math.floor(seconds / i.seconds);
     if (count > 0) {
-      return
-`${count} ${i.label}${count > 1 ? "s" : ""} ago`;
-
+      return `${count} ${i.label}${count > 1 ? "s" : ""} ago`;
     }
   }
   return "just now";
@@ -42,9 +40,7 @@ const ManagePosts = () => {
   };
 
   const handleEdit = (id) => {
-    navigate(
-`/admin/edit/${id}`
-);
+    navigate(`/admin/edit/${id}`);
   };
 
   return (
